@@ -8,15 +8,3 @@
  3. Windows or other tools sceduling with qlik-cli
  4. We can put some info about backup from CM and restore into SaaS
 
-
-
-
-
-
-
-How to: Qlik Application Automation for backing up and versioning Qlik Cloud apps on Githubhttps://community.qlik.com/t5/Knowledge/How-to-Qlik-Application-Automation-for-backing-up-and-versioning/ta-p/1835917
-Need to be updated to use the below templates
-GitHub templates uses Base64 encoding, which does NOT include any app data!
-Other user’s (not running the Automation) private objects are completely HIDDEN from tenant Admin at this time.
-To be able to catch all user’s private objects, they need to be impersonated -> each user needs an API key.
-QAA can not loop through multiple API keys to impersonate.![image](https://user-images.githubusercontent.com/28060254/168031917-bce2eac9-9f40-42fa-830a-9572535594f4.png)
