@@ -7,3 +7,4 @@
 	 - QAA vs qlik-cli conclusion
  3. Windows or other tools sceduling with qlik-cli
  4. We can put some info about backup from CM and restore into SaaS
+![image](https://user-images.githubusercontent.com/19431186/168031927-3ec68c65-ad89-4789-ad1e-8f7a906d52ee.png)
