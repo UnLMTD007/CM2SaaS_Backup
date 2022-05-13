@@ -42,3 +42,20 @@ qlik app object publish sheetID -a appID
 
 We have tested a lot of CLI functions to get sheet attributes, but could not find anything useful
 - How to get attributes about sheets before export?
+
+Personal sheets/Bookmarks when moving an app
+-
+
+- Capturing Private objects (of all users) in CM is possible.
+- Not possible to transfer captured statuses of objects to Saas tenant.
+	- Status = Owner (cannot be transferred) and Public/Private
+	- When uploading JSON objects (from CM), the become the private property of the person running the command. 
+
+Some useful links:
+https://community.qlik.com/t5/Suggest-an-Idea/Qlik-Sense-SaaS-Delete-all-user-content-and-or-take-ownership-of/idi-p/1736791 
+
+https://www.linkedin.com/pulse/bulk-migrating-qlik-sense-apps-from-windows-saas-christof-schwarz/?trackingId=9%2FfD1KIVSUuDTxjiLD2dIw%3D%3D
+
+Private objects is NOT accessible outside the current running context (even for tenant admin)
+![image](https://user-images.githubusercontent.com/28060254/168272327-75b15c58-c5aa-42e8-b67f-ba153e04c17c.png)
+
