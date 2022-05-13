@@ -21,6 +21,9 @@ https://community.qlik.com/t5/Knowledge/How-to-Qlik-Application-Automation-for-b
 
 ![image](https://user-images.githubusercontent.com/28060254/168032934-9bd96927-edfc-4243-813d-9113031d8025.png)
 
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/28060254/168284699-3cd5dd19-9589-4ebf-b922-e0dcb4631409.png)
+
+
 
 Qlik CLI commands (more detailed control)
 -
