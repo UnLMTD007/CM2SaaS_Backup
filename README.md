@@ -1,16 +1,74 @@
 
-# CM2SaaS Backup
- 1. ATM we have no full backup options, other user's private content cannot be reached.
- 2. We can recommend the use of qlik-cli and QAA to backup current user and published objects.
-     - QAA is good point to start from and to try it
-	 - qlik-cli is better, you have more control over the export process
-	 - qlik-cli supports switching user context (loop thu users shared their API keys)
-	 - QAA vs qlik-cli conclusion
- 3. Windows or other tools scheduling with qlik-cli
- 4. We can put some info about backup from CM and restore into SaaS
+# Qlik Backup and Restore
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/28060254/168284699-3cd5dd19-9589-4ebf-b922-e0dcb4631409.png)
+
+Migration process from Qlik Client-Managed to Qlik SaaS requires to move applications.
+You can backup (export) applications from Qlik Client-Managed or Qlik SaaS and restore it into Qlik SaaS.
+
+Qlik Client-Managed and Qlik SaaS have different User Models.
+User Groups in Client-Managed vs Users in SaaS, it means SaaS is more secure focused and users more isolated.
+**In SaaS Tenant Admin cannot change sheet ownership like in Client-Managed QMC.**
+
+The process can be performed using Qlik-CLI as described [here in Christof Schwarz LinkedIn Article](https://www.linkedin.com/pulse/bulk-migrating-qlik-sense-apps-from-windows-saas-christof-schwarz/?trackingId=9/fD1KIVSUuDTxjiLD2dIw==).
+
+Qlik Client-Managed to Qlik SaaS Process
+-
+1. **Store Original Sheet Ownership information into JSON**
+	
+2. **Change Ownership to Admin who perform Backup**
+	
+3. **Rename Sheets (add user ID and Publish Status)**
+	
+4. **Export Application**
+	
+5. **Import Application into SaaS private space**
+	
+6. **Publish Application to Managed Space**
+	
+7. **Publish app sheets**
+	
+8. **Users duplicate their own Sheets to make it Private**
+	
+9. **Admin cleans up all community sheets**
+	 
+
+In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
+We can restore all backup objects into SaaS, but in admin ownership.
+They can be shared by publishing obj and duplicated by users to have their personal copy.
+Clean-up process after can reduce obj amount after.
+
+Qlik SaaS to Qlik SaaS Process (same or another tenant)
+-
+- QAA is good point to start from and to try it
+- qlik-cli is better, you have more control over the export process
+- qlik-cli supports switching user context (loop thu users shared their API keys)
+- QAA vs qlik-cli conclusion
+
+
+
+
+
+ATM we have no full backup options, other user's private content cannot be reached.
+-
+
+We can recommend the use of qlik-cli and QAA to backup current user and published objects.
+-
+
+
+
+Windows or other tools scheduling with qlik-cli
+-
+
+We can put some info about backup from CM and restore into SaaS
+-
+
+
+
+
+
+
 
 Backup/restore apps in the cloud QAA
--
 How to: Qlik Application Automation for backing up and versioning Qlik Cloud apps on GitHub?
 https://community.qlik.com/t5/Knowledge/How-to-Qlik-Application-Automation-for-backing-up-and-versioning/ta-p/1835917
 	- Need to be updated to use the below templates
@@ -20,9 +78,6 @@ https://community.qlik.com/t5/Knowledge/How-to-Qlik-Application-Automation-for-b
 	- QAA can not loop through multiple API keys to impersonate.
 
 ![image](https://user-images.githubusercontent.com/28060254/168032934-9bd96927-edfc-4243-813d-9113031d8025.png)
-
-![MicrosoftTeams-image](https://user-images.githubusercontent.com/28060254/168284699-3cd5dd19-9589-4ebf-b922-e0dcb4631409.png)
-
 
 
 Qlik CLI commands (more detailed control)
@@ -45,20 +100,3 @@ qlik app object publish sheetID -a appID
 
 We have tested a lot of CLI functions to get sheet attributes, but could not find anything useful
 - How to get attributes about sheets before export?
-
-Personal sheets/Bookmarks when moving an app
--
-
-- Capturing Private objects (of all users) in CM is possible.
-- Not possible to transfer captured statuses of objects to Saas tenant.
-	- Status = Owner (cannot be transferred) and Public/Private
-	- When uploading JSON objects (from CM), the become the private property of the person running the command. 
-
-Some useful links:
-https://community.qlik.com/t5/Suggest-an-Idea/Qlik-Sense-SaaS-Delete-all-user-content-and-or-take-ownership-of/idi-p/1736791 
-
-https://www.linkedin.com/pulse/bulk-migrating-qlik-sense-apps-from-windows-saas-christof-schwarz/?trackingId=9%2FfD1KIVSUuDTxjiLD2dIw%3D%3D
-
-Private objects is NOT accessible outside the current running context (even for tenant admin)
-![image](https://user-images.githubusercontent.com/28060254/168272327-75b15c58-c5aa-42e8-b67f-ba153e04c17c.png)
-
