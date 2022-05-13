@@ -45,6 +45,12 @@ We can restore all backup objects into SaaS, but in admin ownership.
 They can be shared by publishing obj and duplicated by users to have their personal copy.
 Clean-up process after can reduce obj amount after.
 
+![image](https://user-images.githubusercontent.com/28060254/168296062-f0ff2ec7-bfcd-4a88-b9e2-4431aafd705a.png)
+
+By default, no user will be the same on Qlik Cloud. It depends on how you configure your Identity Provider (IDP). The "UserID" in Qlik SaaS returns the "sub" (subject) field of the IDP, which can be some meaning-less surrogate key (for example Qlik's default IDP until you configure another, will return values like "auth0|a08D00001RNqXIAX") and this will break Section Access functionality or the use of OSUser(). But you can change that (not with Qlik's default IDP, but when you configure your own). I mananged that the IDP sends the user-prefix of the email as sub ... christof.schwarz
+
+The "UserDirectory" field is unknown to Qlik SaaS, unless you use the "Realm" field of an IdP with a static text value. In my case above, I set it to the same text, that under Windows was my Active Directory name "GITDIR". And then only, I was still the same as before, and Section Access and OSUser() in apps will still work without change.
+
 Qlik SaaS to Qlik SaaS Process (same or another tenant)
 -
 - QAA is good point to start from and to try it
