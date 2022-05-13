@@ -14,7 +14,8 @@ The process can be performed using Qlik-CLI as described [here in Christof Schwa
 Qlik Client-Managed to Qlik SaaS Process
 -
 1. **Store Original Sheet Ownership information into JSON**
-	
+	![image](https://user-images.githubusercontent.com/28060254/168292765-e7ea0d62-0e92-4626-b741-940a75f6fd98.png)
+
 2. **Change Ownership to Admin who perform Backup**
 	
 3. **Rename Sheets (add user ID and Publish Status)**
