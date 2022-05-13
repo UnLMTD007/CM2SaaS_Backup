@@ -11,27 +11,33 @@ User Groups in Client-Managed vs Users in SaaS, it means SaaS is more secure foc
 
 The process can be performed using Qlik-CLI as described [here in Christof Schwarz LinkedIn Article](https://www.linkedin.com/pulse/bulk-migrating-qlik-sense-apps-from-windows-saas-christof-schwarz/?trackingId=9/fD1KIVSUuDTxjiLD2dIw==).
 
+    qlik app unbuild --app APP-ID
+
 Qlik Client-Managed to Qlik SaaS Process
 -
-1. **Store Original Sheet Ownership information into JSON**
-	![image](https://user-images.githubusercontent.com/28060254/168292765-e7ea0d62-0e92-4626-b741-940a75f6fd98.png)
+**1. Store Original Sheet Ownership information into JSON**
+
 ![image](https://user-images.githubusercontent.com/28060254/168292995-4f55e07a-622b-4abd-9e79-09da177fea84.png)
 
-2. **Change Ownership to Admin who perform Backup**
+    qlik app unbuild --app APP-ID
+
+https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
+
+**2. Change Ownership to Admin who perform Backup**
 	
-3. **Rename Sheets (add user ID and Publish Status)**
+**3. Rename Sheets (add user ID and Publish Status)**
 	
-4. **Export Application**
+**4. Export Application**
 	
-5. **Import Application into SaaS private space**
+**5. Import Application into SaaS private space**
 	
-6. **Publish Application to Managed Space**
+**6. Publish Application to Managed Space**
 	
-7. **Publish app sheets**
+**7. Publish app sheets**
 	
-8. **Users duplicate their own Sheets to make it Private**
+**8. Users duplicate their own Sheets to make it Private**
 	
-9. **Admin cleans up all community sheets**
+**9. Admin cleans up all community sheets**
 	 
 
 In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
