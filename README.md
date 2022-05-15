@@ -17,27 +17,55 @@ Qlik Client-Managed to Qlik SaaS Process
 -
 **1. Store Original Sheet Ownership information into JSON**
 
+ - Why: To be able to restore and check App State before and after backup.
+ - How To: Execute Qlik-CLI command:
+
 ![image](https://user-images.githubusercontent.com/28060254/168292995-4f55e07a-622b-4abd-9e79-09da177fea84.png)
 
     qlik app unbuild --app APP-ID
 
 https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
 
-**2. Change Ownership to Admin who perform Backup**
+**2. Change Ownership of App User Objects to Admin who perform the Backup**
+
+ - Why: 
+ - How To: In Client-Managed QMC 
+
 	
 **3. Rename Sheets (add user ID and Publish Status)**
+
+ - Why: 
+ - How To: 
 	
 **4. Export Application**
+
+ - Why: 
+ - How To: 
 	
 **5. Import Application into SaaS private space**
+
+ - Why: 
+ - How To: 
 	
 **6. Publish Application to Managed Space**
+
+ - Why: 
+ - How To: 
 	
 **7. Publish app sheets**
+
+ - Why: 
+ - How To: 
 	
 **8. Users duplicate their own Sheets to make it Private**
+
+ - Why: 
+ - How To: 
 	
 **9. Admin cleans up all community sheets**
+
+ - Why: 
+ - How To: 
 	 
 In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
 We can restore all backup objects into SaaS, but in admin ownership.
