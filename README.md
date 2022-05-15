@@ -90,17 +90,28 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
 
 **8. Users duplicate their own Sheets to make it Private**
 
- - Why: 
- - How To: 
+ - Why: Tenant Admin not alowed to return Sheets to Ororiginal owner. It must be done manually by Users
+ - How To: You need to assign Professional license (like in Client-Managed) to users who need to have its own Private Sheets
+
+Users can Duplicate Base Sheets
 
 ![image](https://user-images.githubusercontent.com/28060254/168473305-8623233d-f805-4e63-84ed-04ec9b0c10c7.png)
 
+Users can Reclaim Community Sheets by Unpublishing Them
+
 ![image](https://user-images.githubusercontent.com/28060254/168473477-206b863b-3646-4927-a387-ffe2f62c9d36.png)
-	
+
 **9. Admin cleans up all community sheets**
 
- - Why: 
+ - Why: You need to give defined time window for Users to take their sheets into Pivate ones. We need to clean up all abandoned sheed that dont need to stay published (if we have some labels from Step#3)
  - How To: 
+   - Thru GUI
+
+   - Using Qlik-CLI
+
+     Unpublish: https://qlik.dev/libraries-and-tools/qlik-cli/app-object-unpublish
+
+     Remove: https://qlik.dev/libraries-and-tools/qlik-cli/app-object-rm
 	 
 In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
 We can restore all backup objects into SaaS, but in admin ownership.
