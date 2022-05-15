@@ -37,20 +37,35 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
    - Change Owner to Current User who perform the Backup
 ![image](https://user-images.githubusercontent.com/28060254/168471522-088d2a9d-d8c2-419d-9362-91eb258ba5bb.png)
 	
-**3. (Optional) Rename Sheets (add user ID and Publish Status)**
+**3. (Optional) Rename Sheets (add user ID and Privacy Status)**
 
  - Why: To have clear vision to whom this objects belongs and published/private status
  - How To: Using Step#1 Info we loop thru App Objects using Qlik-CLI
 	
 **4. Export Application**
 
- - Why: 
- - How To: 
-	
-**5. Import Application into SaaS private space**
+ - Why: Export QVF file into Local Storage to be able to Restore it into SaaS Tenant
+ - How To: Using Qlik-CLI Export-QlikApp command
 
- - Why: 
- - How To: 
+https://github.com/ahaydon/Qlik-Cli-Windows/
+	
+**5. Import Application into SaaS Tenant Admin private space**
+
+ - Why: Admin Private Space used as Drop-Off location for all App Objects
+ - How To: Can be performed by Qlik-CLI, Manually thru GUI or Qlik Application Automation
+
+   - Qlik-CLI
+   `qlik app import --file "C:\tmp\MyNewFile.qvf" --mode autoreplace`
+     - We can Import and restore with data (if needed) --nodata false 
+     - With “Autoreplace” feature, which will keep published/private status from current app (only for the user running the CLI command)
+     - If not using “Autoreplace” new copy of app will be created (new ID), all sheets will become private for current user
+
+   - Manually thru GUI
+
+
+   - Qlik Application Automation
+
+
 	
 **6. Publish Application to Managed Space**
 
@@ -134,10 +149,7 @@ Export/Import through Qlik CLI
 `qlik app export 368afaef-9b49-4140-b7fd-6b98873332cd --output-file "C:\tmp\MyNewFile.qvf“`
 - Export process does NOT include any Published/Private status about sheets
 
-`qlik app import --file "C:\tmp\MyNewFile.qvf" --mode autoreplace`
-- We can Import and restore with data (if needed) --nodata false 
-- With “Autoreplace” feature, which will keep published/private status from current app (only for the user running the CLI command)
-- If not using “Autoreplace” new copy of app will be created (new ID), all sheets will become private for current user
+
 
 Sheets that are Private can be promoted to Published status using
 - 
