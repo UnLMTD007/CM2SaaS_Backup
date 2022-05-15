@@ -113,12 +113,12 @@ Users can Reclaim Community Sheets by Unpublishing Them
 
      Remove: https://qlik.dev/libraries-and-tools/qlik-cli/app-object-rm
 	 
+**10. Tenant Admin can enable externa IdP to have the same UserIDs**
+
 In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
 We can restore all backup objects into SaaS, but in admin ownership.
 They can be shared by publishing obj and duplicated by users to have their personal copy.
 Clean-up process after can reduce obj amount after.
-
-**10. Tenant Admin can enable externa IdP to have the same UserIDs**
 
 ![image](https://user-images.githubusercontent.com/28060254/168296062-f0ff2ec7-bfcd-4a88-b9e2-4431aafd705a.png)
 
@@ -126,63 +126,3 @@ By default, no user will be the same on Qlik Cloud. It depends on how you config
 
 The "UserDirectory" field is unknown to Qlik SaaS, unless you use the "Realm" field of an IdP with a static text value. In my case above, I set it to the same text, that under Windows was my Active Directory name "GITDIR". And then only, I was still the same as before, and Section Access and OSUser() in apps will still work without change.
 
-Qlik SaaS to Qlik SaaS Process (same or another tenant)
--
-- QAA is good point to start from and to try it
-- qlik-cli is better, you have more control over the export process
-- qlik-cli supports switching user context (loop thu users shared their API keys)
-- QAA vs qlik-cli conclusion
-
-
-
-
-
-ATM we have no full backup options, other user's private content cannot be reached.
--
-
-We can recommend the use of qlik-cli and QAA to backup current user and published objects.
--
-
-
-
-Windows or other tools scheduling with qlik-cli
--
-
-We can put some info about backup from CM and restore into SaaS
--
-
-
-
-
-
-
-
-Backup/restore apps in the cloud QAA
-How to: Qlik Application Automation for backing up and versioning Qlik Cloud apps on GitHub?
-https://community.qlik.com/t5/Knowledge/How-to-Qlik-Application-Automation-for-backing-up-and-versioning/ta-p/1835917
-	- Need to be updated to use the below templates
-	- GitHub templates uses Base64 encoding, which does NOT include any app data!
-	- Other user’s (not running the Automation) private objects are completely HIDDEN from tenant Admin at this time.
-	- To be able to catch all user’s private objects, they need to be impersonated -> each user needs an API key.
-	- QAA can not loop through multiple API keys to impersonate.
-
-![image](https://user-images.githubusercontent.com/28060254/168032934-9bd96927-edfc-4243-813d-9113031d8025.png)
-
-
-Qlik CLI commands (more detailed control)
--
-Export/Import through Qlik CLI
-`qlik app export 368afaef-9b49-4140-b7fd-6b98873332cd --output-file "C:\tmp\MyNewFile.qvf“`
-- Export process does NOT include any Published/Private status about sheets
-
-
-
-
-- 
-
-qlik app object publish sheetID -a appID
-
-    qlik app object publish 51099afe-2dab-4476-a8dd-9263682ad681 -a 71bb562d-468b-4bb3-892d-decdc0d6b13e
-
-We have tested a lot of CLI functions to get sheet attributes, but could not find anything useful
-- How to get attributes about sheets before export?
