@@ -33,10 +33,10 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
    - In Client-Managed QMC filter App Objects by Application you need
    - Select all by Ctrl+LMB click
    - Edit all by button below
-![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/28060254/168471294-b352be3e-b663-492e-95e8-f22a199ae936.png)
+![image](https://user-images.githubusercontent.com/28060254/168471459-1b6d0232-31cd-4f4b-b8f2-b7ea328ed3a3.png)
    - 
 
-![image](https://user-images.githubusercontent.com/28060254/168471459-1b6d0232-31cd-4f4b-b8f2-b7ea328ed3a3.png)
+
 
 
 	
