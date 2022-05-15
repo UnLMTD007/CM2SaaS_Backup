@@ -28,23 +28,19 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
 
 **2. Change Ownership of App User Objects to Admin who perform the Backup**
 
- - Why: 
+ - Why: To be able to capture Private App Ojects created by Other Users
  - How To:
    - In Client-Managed QMC filter App Objects by Application you need
    - Select all by Ctrl+LMB click
-   - Edit all by button below
+   - Edit all by button "Edit (#)"
 ![image](https://user-images.githubusercontent.com/28060254/168471459-1b6d0232-31cd-4f4b-b8f2-b7ea328ed3a3.png)
-   - 
-
+   - Change Owner to Current User who perform the Backup
 ![image](https://user-images.githubusercontent.com/28060254/168471522-088d2a9d-d8c2-419d-9362-91eb258ba5bb.png)
-
-
-
 	
-**3. Rename Sheets (add user ID and Publish Status)**
+**3. (Optional) Rename Sheets (add user ID and Publish Status)**
 
- - Why: 
- - How To: 
+ - Why: To have clear vision to whom this objects belongs and published/private status
+ - How To: Using Step#1 Info we loop thru App Objects using Qlik-CLI
 	
 **4. Export Application**
 
