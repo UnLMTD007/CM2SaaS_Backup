@@ -93,6 +93,7 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
  - Why: 
  - How To: 
 ![image](https://user-images.githubusercontent.com/28060254/168473305-8623233d-f805-4e63-84ed-04ec9b0c10c7.png)
+![image](https://user-images.githubusercontent.com/28060254/168473477-206b863b-3646-4927-a387-ffe2f62c9d36.png)
 	
 **9. Admin cleans up all community sheets**
 
