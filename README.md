@@ -39,11 +39,12 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
 	
 **9. Admin cleans up all community sheets**
 	 
-
 In CM we can capture all objects in application by changing personal objects ownership to person who perform backup.
 We can restore all backup objects into SaaS, but in admin ownership.
 They can be shared by publishing obj and duplicated by users to have their personal copy.
 Clean-up process after can reduce obj amount after.
+
+**10. Tenant Admin can enable externa IdP to have the same UserIDs**
 
 ![image](https://user-images.githubusercontent.com/28060254/168296062-f0ff2ec7-bfcd-4a88-b9e2-4431aafd705a.png)
 
