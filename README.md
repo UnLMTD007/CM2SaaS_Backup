@@ -30,6 +30,7 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
 
  - Why: 
  - How To: In Client-Managed QMC 
+![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/28060254/168471294-b352be3e-b663-492e-95e8-f22a199ae936.png)
 
 	
 **3. Rename Sheets (add user ID and Publish Status)**
