@@ -52,7 +52,7 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
 **5. Import Application into SaaS Tenant Admin private space**
 
  - Why: Admin Private Space used as Drop-Off location for all App Objects
- - How To: Can be performed by Qlik-CLI, Manually thru GUI or Qlik Application Automation
+ - How To: Can be performed by Qlik-CLI and Manually thru GUI
 
    - Qlik-CLI
    `qlik app import --file "C:\tmp\MyNewFile.qvf" --mode autoreplace`
@@ -68,14 +68,24 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
 
  - Why: Now we share an Application with authorised Users
  - How To: 
-![image](https://user-images.githubusercontent.com/28060254/168472839-a0ac2d9c-4e58-4cf9-8932-8a27103c5b80.png)
-![image](https://user-images.githubusercontent.com/28060254/168472871-0618c352-5c2d-4f9e-ad9e-f0c41bec7e41.png)
+   - Thru GUI
 
+![image](https://user-images.githubusercontent.com/28060254/168472839-a0ac2d9c-4e58-4cf9-8932-8a27103c5b80.png) ![image](https://user-images.githubusercontent.com/28060254/168472871-0618c352-5c2d-4f9e-ad9e-f0c41bec7e41.png)
+
+   - Using Qlik-CLI https://qlik.dev/libraries-and-tools/qlik-cli/app-publish
+
+`qlik app publish [flags]`
 	
 **7. Publish app sheets**
 
- - Why: 
+ - Why: Sheets that are Private need to be promoted to Published to be availiable for another users
  - How To: 
+   - Thru GUI
+
+
+   - Using Qlik-CLI https://qlik.dev/libraries-and-tools/qlik-cli/app-object-publish
+
+`qlik app object publish sheetID -a appID`
 	
 **8. Users duplicate their own Sheets to make it Private**
 
@@ -151,7 +161,7 @@ Export/Import through Qlik CLI
 
 
 
-Sheets that are Private can be promoted to Published status using
+
 - 
 
 qlik app object publish sheetID -a appID
