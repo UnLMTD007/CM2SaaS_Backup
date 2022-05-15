@@ -29,8 +29,14 @@ https://www.qlik.dev/libraries-and-tools/qlik-cli/app-unbuild
 **2. Change Ownership of App User Objects to Admin who perform the Backup**
 
  - Why: 
- - How To: In Client-Managed QMC 
+ - How To:
+   - In Client-Managed QMC filter App Objects by Application you need
+   - Select all by Ctrl+LMB click
+   - Edit all by button below
 ![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/28060254/168471294-b352be3e-b663-492e-95e8-f22a199ae936.png)
+   - 
+
+
 
 	
 **3. Rename Sheets (add user ID and Publish Status)**
