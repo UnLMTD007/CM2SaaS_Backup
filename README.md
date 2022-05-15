@@ -61,16 +61,12 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
      - If not using “Autoreplace” new copy of app will be created (new ID), all sheets will become private for current user
 
    - Manually thru GUI
+
 ![image](https://user-images.githubusercontent.com/28060254/168472475-0105ba1a-c9a1-4a76-972e-d1926459ad1c.png)
-
-
-   - Qlik Application Automation
-
-
 	
 **6. Publish Application to Managed Space**
 
- - Why: 
+ - Why: Now we share an Application with authorised Users
  - How To: 
 	
 **7. Publish app sheets**
