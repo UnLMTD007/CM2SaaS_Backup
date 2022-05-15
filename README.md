@@ -69,6 +69,8 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
  - Why: Now we share an Application with authorised Users
  - How To: 
 ![image](https://user-images.githubusercontent.com/28060254/168472839-a0ac2d9c-4e58-4cf9-8932-8a27103c5b80.png)
+![image](https://user-images.githubusercontent.com/28060254/168472871-0618c352-5c2d-4f9e-ad9e-f0c41bec7e41.png)
+
 	
 **7. Publish app sheets**
 
