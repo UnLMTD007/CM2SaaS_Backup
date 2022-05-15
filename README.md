@@ -81,12 +81,13 @@ https://github.com/ahaydon/Qlik-Cli-Windows/
  - Why: Sheets that are Private need to be promoted to Published to be availiable for another users
  - How To: 
    - Thru GUI
-
+![image](https://user-images.githubusercontent.com/28060254/168473210-8873561a-4724-4cd6-a729-610770f7fa34.png)
 
    - Using Qlik-CLI https://qlik.dev/libraries-and-tools/qlik-cli/app-object-publish
 
 `qlik app object publish sheetID -a appID`
 	
+
 **8. Users duplicate their own Sheets to make it Private**
 
  - Why: 
