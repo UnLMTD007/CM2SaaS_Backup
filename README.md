@@ -1,6 +1,7 @@
 
 # Qlik Backup and Restore
-![MicrosoftTeams-image](https://user-images.githubusercontent.com/28060254/168284699-3cd5dd19-9589-4ebf-b922-e0dcb4631409.png)
+![image](https://user-images.githubusercontent.com/19431186/179767397-e2d06eeb-5e3d-401d-8511-dbe176bd530a.png)
+
 
 Migration process from Qlik Client-Managed to Qlik SaaS requires to move applications.
 You can backup (export) applications from Qlik Client-Managed or Qlik SaaS and restore it into Qlik SaaS.
