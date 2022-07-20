@@ -1,18 +1,17 @@
 
 # Qlik Backup and Restore
-![image](https://user-images.githubusercontent.com/19431186/179767397-e2d06eeb-5e3d-401d-8511-dbe176bd530a.png)
 
-
+Introduction
+-
 Migration process from Qlik Client-Managed to Qlik SaaS requires to move applications.
-You can backup (export) applications from Qlik Client-Managed or Qlik SaaS and restore it into Qlik SaaS.
+You can backup (export) applications from Qlik Client-Managed and restore it into Qlik SaaS.
 
 Qlik Client-Managed and Qlik SaaS have different User Models.
 User Groups in Client-Managed vs Users in SaaS, it means SaaS is more secure focused and users more isolated.
 **In SaaS Tenant Admin cannot change sheet ownership like in Client-Managed QMC.**
 
+![image](https://user-images.githubusercontent.com/19431186/179767397-e2d06eeb-5e3d-401d-8511-dbe176bd530a.png)
 The process can be performed using Qlik-CLI as described [here in Christof Schwarz LinkedIn Article](https://www.linkedin.com/pulse/bulk-migrating-qlik-sense-apps-from-windows-saas-christof-schwarz/?trackingId=9/fD1KIVSUuDTxjiLD2dIw==).
-
-    qlik app unbuild --app APP-ID
 
 Qlik Client-Managed to Qlik SaaS Process
 -
